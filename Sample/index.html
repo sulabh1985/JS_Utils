@@ -4,11 +4,27 @@
 	<script type="text/javascript" src="D:\Projects\JS_Utils\JS_Utils\src\Util.js"></script>
 	<script>
 		
+		
+		
+		function showOne(){
 		var util = Utility();
-		util.isPropertyExists();
+			util.showElementById('showone');
+		}
+		function hideOne(){
+		var util = Utility();
+			util.hideElementById('showone');
+		}
 	</script>
 </head>
 <body>
-	<h1>Utility</h1>
+	<h1>Javascript Utility Functions</h1>
+	<hr>
+	<h3>Show/Hide by Element Id</h3>
+	<button onclick="showOne();">Show Below Text</button>
+	<button onclick="hideOne();">Hide Below Text</button>
+	<br/>
+	<br/>
+	<div id='showone'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+	<hr>
 </body>
 </html>

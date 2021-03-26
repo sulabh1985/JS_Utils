@@ -1,19 +1,31 @@
 <html>
 <head>
 	<title>Sample Javascript Utilities Function</title>
+	<style>
+		code, code div {
+		font-family: Consolas,"courier new";
+		background-color: #f1f1f1;
+		padding: 2px;
+		}
+	</style>
 	<script type="text/javascript" src="D:\Projects\JS_Utils\JS_Utils\src\Util.js"></script>
 	<script>
-		
-		
-		
 		function showOne(){
-		var util = Utility();
+			var util = Utility();
 			util.showElementById('showone');
 		}
 		function hideOne(){
-		var util = Utility();
+			var util = Utility();
 			util.hideElementById('showone');
 		}
+		function showAll(){
+			var util = Utility();
+			util.showElementByIds(['showthree','showtwo']);
+		}
+		function hideAll(){
+			var util = Utility();
+			util.hideElementByIds(['showthree','showtwo']);
+		}		
 	</script>
 </head>
 <body>
@@ -23,8 +35,35 @@
 	<button onclick="showOne();">Show Below Text</button>
 	<button onclick="hideOne();">Hide Below Text</button>
 	<br/>
+	<code>
+			<div><strong>To Show the Element</strong></div>
+			<div>var util = Utility();</div>
+			<div>util.showElementById('showone');</div>
+			<br/>
+			<div><strong>To hide the Element</strong></div>
+			<div>var util = Utility();</div>
+			<div>util.hideElementById('showone');</div>			
+	</code>
 	<br/>
-	<div id='showone'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+	<div id='showone'>1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
 	<hr>
+	<h3>Show/Hide Elements by Multiple Ids</h3>
+	<button onclick="showAll();">Show Below Text Elements</button>
+	<button onclick="hideAll();">Hide Below Text Elements</button>
+	<br/>
+	<code>
+			<div><strong>To Show the Elements</strong></div>
+			<div>var util = Utility();</div>
+			<div>util.showElementByIds(['showtwo','showthree']);</div>
+			<br/>
+			<div><strong>To hide the Elements</strong></div>
+			<div>var util = Utility();</div>
+			<div>util.hideElementByIds(['showtwo','showthree']);</div>			
+	</code>
+	<br/>
+	<div id='showtwo'>2. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+	<br/>
+	<div id='showthree'>3. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>	
+	<hr>	
 </body>
 </html>
